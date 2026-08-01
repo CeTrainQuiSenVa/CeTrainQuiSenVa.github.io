@@ -1,237 +1,35 @@
-<!DOCTYPE html>
-<html>
-<head>
-  <meta charset="utf-8">
-  
-  
-  <title>8月1日 | Hexo</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <meta name="description" content="补 - 7月31日结构体结构体类型和变量的声明 带标记和匿名的typedef创建结构体 结构体数组 结构体指针（ptr-&gt;member） 文本&#x2F;二进制类型的文件读写文件指针FILE *fp 文件I&#x2F;O函数的使用（fopen(), fclose(), fgetc(), fputc(), fgets(), fputs(), fread(), fwrite()） 光标和缓冲区管">
-<meta property="og:type" content="article">
-<meta property="og:title" content="8月1日">
-<meta property="og:url" content="http://example.com/2026/08/01/8%E6%9C%881%E6%97%A5/index.html">
-<meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="补 - 7月31日结构体结构体类型和变量的声明 带标记和匿名的typedef创建结构体 结构体数组 结构体指针（ptr-&gt;member） 文本&#x2F;二进制类型的文件读写文件指针FILE *fp 文件I&#x2F;O函数的使用（fopen(), fclose(), fgetc(), fputc(), fgets(), fputs(), fread(), fwrite()） 光标和缓冲区管">
-<meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2026-08-01T03:41:04.000Z">
-<meta property="article:modified_time" content="2026-08-01T04:53:34.924Z">
-<meta property="article:author" content="秋水">
-<meta name="twitter:card" content="summary">
-  
-    <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
-  
-  
-    <link rel="shortcut icon" href="/favicon.png">
-  
-  
-  
-<link rel="stylesheet" href="/css/style.css">
+extends includes/layout.pug
 
-  
-    
-<link rel="stylesheet" href="/fancybox/jquery.fancybox.min.css">
+block content
+  #post
+    if top_img === false
+      include includes/header/post-info.pug
 
-  
-  
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/fork-awesome@1.2.0/css/fork-awesome.min.css">
+    article#article-container.container.post-content
+      if theme.noticeOutdate.enable && page.noticeOutdate !== false
+        include includes/post/outdate-notice.pug
+      else
+        !=page.content
+    include includes/post/post-copyright.pug
+    .tag_share
+      if (page.tags.length > 0 && theme.post_meta.post.tags)
+        .post-meta__tag-list
+          each item, index in page.tags.data
+            a(href=url_for(item.path)).post-meta__tags #[=item.name]
+      include includes/third-party/share/index.pug
 
-<meta name="generator" content="Hexo 8.1.2"></head>
+    if theme.reward.enable && theme.reward.QR_code
+      !=partial('includes/post/reward', {}, {cache: true})
 
-<body>
-  <div id="container">
-    <div id="wrap">
-      <header id="header">
-  <div id="banner"></div>
-  <div id="header-outer" class="outer">
-    <div id="header-title" class="inner">
-      <h1 id="logo-wrap">
-        <a href="/" id="logo">Hexo</a>
-      </h1>
-      
-    </div>
-    <div id="header-inner" class="inner">
-      <nav id="main-nav">
-        <a id="main-nav-toggle" class="nav-icon"><span class="fa fa-bars"></span></a>
-        
-          <a class="main-nav-link" href="/">Home</a>
-        
-          <a class="main-nav-link" href="/archives">Archives</a>
-        
-      </nav>
-      <nav id="sub-nav">
-        
-        
-          <a class="nav-icon" href="/atom.xml" title="RSS 订阅"><span class="fa fa-rss"></span></a>
-        
-        <a class="nav-icon nav-search-btn" title="搜索"><span class="fa fa-search"></span></a>
-      </nav>
-      <div id="search-form-wrap">
-        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="搜索"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://example.com"></form>
-      </div>
-    </div>
-  </div>
-</header>
+    //- ad
+    if theme.ad && theme.ad.post
+      .ads-wrap!=theme.ad.post
 
-      <div class="outer">
-        <section id="main"><article id="post-8月1日" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
-  <div class="article-meta">
-    <a href="/2026/08/01/8%E6%9C%881%E6%97%A5/" class="article-date">
-  <time class="dt-published" datetime="2026-08-01T03:41:04.000Z" itemprop="datePublished">2026-08-01</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 class="p-name article-title" itemprop="headline name">
-      8月1日
-    </h1>
-  
+    if theme.post_pagination
+      include includes/pagination.pug
+    if theme.related_post && theme.related_post.enable
+      != related_posts(page,site.posts)
 
-      </header>
-    
-    <div class="e-content article-entry" itemprop="articleBody">
-      
-        <h1 id="补-7月31日"><a href="#补-7月31日" class="headerlink" title="补 - 7月31日"></a>补 - 7月31日</h1><h2 id="结构体"><a href="#结构体" class="headerlink" title="结构体"></a>结构体</h2><p>结构体类型和变量的声明</p>
-<p>带标记和匿名的typedef创建结构体</p>
-<p>结构体数组</p>
-<p>结构体指针（ptr-&gt;member）</p>
-<h2 id="文本-二进制类型的文件读写"><a href="#文本-二进制类型的文件读写" class="headerlink" title="文本&#x2F;二进制类型的文件读写"></a>文本&#x2F;二进制类型的文件读写</h2><p>文件指针FILE *fp</p>
-<p>文件I&#x2F;O函数的使用（fopen(), fclose(), fgetc(), fputc(), fgets(), fputs(), fread(), fwrite()）</p>
-<p>光标和缓冲区管理（rewind(), fseek(), fflush()），注意读写切换时要重新定位光标</p>
-<p>错误返回if(fp &#x3D;&#x3D; NULL，是fopen()的返回值)、if(written !&#x3D; 1)（size_t written &#x3D; fwrite()返回值），其它函数也类似</p>
-<h1 id="8月1日"><a href="#8月1日" class="headerlink" title="8月1日"></a>8月1日</h1><h2 id="枚举和宏定义"><a href="#枚举和宏定义" class="headerlink" title="枚举和宏定义"></a>枚举和宏定义</h2><p>枚举</p>
-<p>宏定义，特别是#define func_name do{;}while(0)</p>
-<h2 id="函数指针"><a href="#函数指针" class="headerlink" title="函数指针"></a>函数指针</h2><p>通常用于传参</p>
-<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">void</span> <span class="title function_">operation</span><span class="params">(<span class="type">int</span> a, <span class="type">int</span> b, (*operation_func)(<span class="type">int</span>, <span class="type">int</span>))</span></span><br><span class="line">&#123;</span><br><span class="line">    operation(a, b);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p>可对不同类型或不同需求应用不同函数，因为只需设一个函数指针，将其指向不同的函数即可</p>
-<p>又或者使用typedef简化函数指针的声明</p>
-<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">typedef</span> <span class="title function_">void</span> <span class="params">(*operation_func)</span><span class="params">(<span class="type">int</span> a, <span class="type">int</span> (*paramFunc)(<span class="type">int</span> x, <span class="type">int</span> y))</span>;</span><br></pre></td></tr></table></figure>
-
-<p>该函数指针有两个参数，整数变量和另一个函数，返回void。这个内嵌的函数参量则是接收2个整型参量，返回整型值。但是，通常内部的函数指针会单独写成一个类型。</p>
-<p>完整的写法可参考：</p>
-<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;stdio.h&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="comment">// PRIVATE TYPEDEF</span></span><br><span class="line"><span class="keyword">typedef</span> <span class="title function_">int</span> <span class="params">(*func1)</span><span class="params">(<span class="type">int</span> x, <span class="type">int</span> y)</span>;</span><br><span class="line"><span class="keyword">typedef</span> <span class="title function_">void</span> <span class="params">(*func2)</span><span class="params">(<span class="type">int</span> a, <span class="type">int</span> b, <span class="type">int</span> c, func1 param_func)</span>;</span><br><span class="line"></span><br><span class="line"><span class="comment">// PRIVATE VARIABLES</span></span><br><span class="line">func1 ptr_func1;</span><br><span class="line">func2 ptr_func2;</span><br><span class="line"></span><br><span class="line"><span class="comment">// FUNCTION PROTOTYPES</span></span><br><span class="line"><span class="type">int</span> <span class="title function_">add</span><span class="params">(<span class="type">int</span> x, <span class="type">int</span> y)</span>;</span><br><span class="line"><span class="type">void</span> <span class="title function_">multiple_and_print</span><span class="params">(<span class="type">int</span> a, <span class="type">int</span> b, <span class="type">int</span> c, func1 param_func)</span>;</span><br><span class="line"><span class="type">void</span> <span class="title function_">subtract_and_print</span><span class="params">(<span class="type">int</span> a, <span class="type">int</span> b, <span class="type">int</span> c, func1 param_func)</span>;</span><br><span class="line"></span><br><span class="line"><span class="type">int</span> <span class="title function_">main</span><span class="params">()</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="type">int</span> a = <span class="number">5</span>, b = <span class="number">10</span>, c = <span class="number">15</span>;</span><br><span class="line">    ptr_func1 = add;</span><br><span class="line">    ptr_func2 = multiple_and_print;</span><br><span class="line">    ptr_func2(a, b, c, ptr_func1); <span class="comment">// 结果应该是5*(10+15)=125</span></span><br><span class="line">    ptr_func2 = subtract_and_print; <span class="comment">// 重新赋值为另一个函数</span></span><br><span class="line">    ptr_func2(a, b, c, ptr_func1); <span class="comment">// 结果应该是5-(10+15)=-20</span></span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="type">int</span> <span class="title function_">add</span><span class="params">(<span class="type">int</span> x, <span class="type">int</span> y)</span>&#123;<span class="keyword">return</span> x+y;&#125;</span><br><span class="line"></span><br><span class="line"><span class="type">void</span> <span class="title function_">multiple_and_print</span><span class="params">(<span class="type">int</span> a, <span class="type">int</span> b, <span class="type">int</span> c, func1 param_func)</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;%d\n&quot;</span>, a*param_func(b, c));</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="type">void</span> <span class="title function_">subtract_and_print</span><span class="params">(<span class="type">int</span> a, <span class="type">int</span> b, <span class="type">int</span> c, func1 param_func)</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;%d\n&quot;</span>, a-param_func(b, c));</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p>函数指针不应该先于函数出现；不是在函数指针内决定函数的功能，它只是和所指向的函数具有一样的参数，具体功能必须由其指向的函数决定。</p>
-<h1 id="多文件工程管理"><a href="#多文件工程管理" class="headerlink" title="多文件工程管理"></a>多文件工程管理</h1><p>当前文件目录：desktop\C\header file test，下有两个文件夹include和src，其中include存储module_imported.h，src存储module_imported.c和module_imported_main.c，目的是在main中引用module中的函数。</p>
-<p>显然在嵌入式中非常常见，main.c中调用自己编写的驱动函数。</p>
-<p>在vscode中，简单工程管理通常修改tasks.json，以表示同时编译两个.c文件，在指定目录下搜索头文件，并生成可执行程序。</p>
-<p>也可以在终端中使用gcc命令编译生成可执行程序。</p>
-<p>大型工程中通常使用Makefile或CMake等。</p>
-<p>下附修改的tasks.json，另外在运行时应使用ctrl+shift+b的编译，而非code runner。（ctrl+alt+n)</p>
-<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">&quot;args&quot;</span>: [</span><br><span class="line">    <span class="string">&quot;-fdiagnostics-color=always&quot;</span>,</span><br><span class="line">    <span class="string">&quot;-g&quot;</span>,</span><br><span class="line">    <span class="string">&quot;$&#123;workspaceFolder&#125;\\src\\module_imported.c&quot;</span>,</span><br><span class="line">    <span class="string">&quot;$&#123;workspaceFolder&#125;\\src\\module_imported_main.c&quot;</span>,</span><br><span class="line">    <span class="string">&quot;-I$&#123;workspaceFolder&#125;\\include&quot;</span>,</span><br><span class="line">    <span class="string">&quot;-o&quot;</span>,</span><br><span class="line">    <span class="string">&quot;$&#123;workspaceFolder&#125;\\program.exe&quot;</span></span><br><span class="line">], ...</span><br></pre></td></tr></table></figure>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://example.com/2026/08/01/8%E6%9C%881%E6%97%A5/" data-id="cuidyKZ94TqgSa1tVulqBL0Gw" data-title="8月1日" class="article-share-link"><span class="fa fa-share">分享</span></a>
-      
-      
-      
-    </footer>
-  </div>
-  
-    
-<nav id="article-nav">
-  
-  
-    <a href="/2026/05/18/hello-world/" id="article-nav-older" class="article-nav-link-wrap">
-      <strong class="article-nav-caption">后一篇</strong>
-      <div class="article-nav-title">Hello World</div>
-    </a>
-  
-</nav>
-
-  
-</article>
-
-
-</section>
-        
-          <aside id="sidebar">
-  
-    
-
-  
-    
-
-  
-    
-  
-    
-  <div class="widget-wrap">
-    <h3 class="widget-title">归档</h3>
-    <div class="widget">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2026/08/">八月 2026</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2026/05/">五月 2026</a></li></ul>
-    </div>
-  </div>
-
-
-  
-    
-  <div class="widget-wrap">
-    <h3 class="widget-title">最新文章</h3>
-    <div class="widget">
-      <ul>
-        
-          <li>
-            <a href="/2026/08/01/8%E6%9C%881%E6%97%A5/">8月1日</a>
-          </li>
-        
-          <li>
-            <a href="/2026/05/18/hello-world/">Hello World</a>
-          </li>
-        
-      </ul>
-    </div>
-  </div>
-
-  
-</aside>
-        
-      </div>
-      <footer id="footer">
-  
-  <div class="outer">
-    <div id="footer-info" class="inner">
-      
-      &copy; 2026 秋水<br>
-      Powered by <a href="https://hexo.io/" target="_blank">Hexo</a>
-    </div>
-  </div>
-</footer>
-
-    </div>
-    <nav id="mobile-nav">
-  
-    <a href="/" class="mobile-nav-link">Home</a>
-  
-    <a href="/archives" class="mobile-nav-link">Archives</a>
-  
-</nav>
-    
-
-
-<script src="/js/jquery-3.6.4.min.js"></script>
-
-
-
-  
-<script src="/fancybox/jquery.fancybox.min.js"></script>
-
-
-
-
-<script src="/js/script.js"></script>
-
-
-
-
-
-  </div>
-</body>
-</html>
+    if page.comments !== false && theme.comments.use
+      - var commentsJsLoad = true
+      !=partial('includes/third-party/comments/index', {}, {cache: true})
