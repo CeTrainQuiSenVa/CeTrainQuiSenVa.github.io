@@ -1,0 +1,234 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0,viewport-fit=cover"><title>8月3日 | Pax Vobiscum</title><meta name="author" content="秋水"><meta name="copyright" content="秋水"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="atan()和atan2() 123atan(1.0) &#x3D;&#x3D; pi&#x2F;4;atan(-1.0) &#x3D;&#x3D; -pi&#x2F;4;atan2(-1.0, -1.0) &#x3D;&#x3D; -3&#x2F;4*pi; assert() 12345double divine(double x, double y)&#123;    assert(y !&#x3D; 0);    return (x&#x2F;y);&#125; 满足assert()中的条件则不会报">
+<meta property="og:type" content="article">
+<meta property="og:title" content="8月3日">
+<meta property="og:url" content="https://cetrainquisenva.github.io/2026/08/03/8%E6%9C%883%E6%97%A5/index.html">
+<meta property="og:site_name" content="Pax Vobiscum">
+<meta property="og:description" content="atan()和atan2() 123atan(1.0) &#x3D;&#x3D; pi&#x2F;4;atan(-1.0) &#x3D;&#x3D; -pi&#x2F;4;atan2(-1.0, -1.0) &#x3D;&#x3D; -3&#x2F;4*pi; assert() 12345double divine(double x, double y)&#123;    assert(y !&#x3D; 0);    return (x&#x2F;y);&#125; 满足assert()中的条件则不会报">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://cetrainquisenva.github.io/img/paul-zoetemeijer-fqa7yvnx280-unsplash.png">
+<meta property="article:published_time" content="2026-08-03T02:20:01.000Z">
+<meta property="article:modified_time" content="2026-08-04T01:24:26.242Z">
+<meta property="article:author" content="秋水">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://cetrainquisenva.github.io/img/paul-zoetemeijer-fqa7yvnx280-unsplash.png"><script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "8月3日",
+  "url": "https://cetrainquisenva.github.io/2026/08/03/8%E6%9C%883%E6%97%A5/",
+  "image": "https://cetrainquisenva.github.io/img/paul-zoetemeijer-fqa7yvnx280-unsplash.png",
+  "datePublished": "2026-08-03T02:20:01.000Z",
+  "dateModified": "2026-08-04T01:24:26.242Z",
+  "author": [
+    {
+      "@type": "Person",
+      "name": "秋水",
+      "url": "https://cetrainquisenva.github.io"
+    }
+  ]
+}</script><link rel="shortcut icon" href="/img/favicon.png"><link rel="canonical" href="https://cetrainquisenva.github.io/2026/08/03/8%E6%9C%883%E6%97%A5/index.html"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css?v=5.6.1"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@7.3.1/css/all.min.css"><script>
+    (() => {
+      
+    const saveToLocal = {
+      set: (key, value, ttl) => {
+        const data = { value }
+
+        if (ttl != null) {
+          data.expiry = Date.now() + ttl * 86400000
+        }
+
+        localStorage.setItem(key, JSON.stringify(data))
+      },
+      get: key => {
+        const itemStr = localStorage.getItem(key)
+        if (!itemStr) return
+
+        try {
+          const data = JSON.parse(itemStr)
+
+          if (data.expiry && Date.now() > data.expiry) {
+            localStorage.removeItem(key)
+            return
+          }
+
+          return data.value
+        } catch {
+          localStorage.removeItem(key)
+        }
+      }
+    }
+
+    const scriptCache = new Map()
+    const cssCache = new Map()
+    window.btf = {
+      saveToLocal,
+      getScript: (url, attr = {}) => {
+        if (scriptCache.has(url)) {
+          return scriptCache.get(url)
+        }
+
+        const promise = new Promise((resolve, reject) => {
+          const script = document.createElement('script')
+
+          script.src = url
+          script.async = true
+
+          for (const key in attr) {
+            script.setAttribute(key, attr[key])
+          }
+
+          script.onload = resolve
+          script.onerror = reject
+
+          document.head.appendChild(script)
+        })
+
+        scriptCache.set(url, promise)
+
+        return promise
+      },
+      getCSS: (url, id) => {
+        if (cssCache.has(url)) {
+          return cssCache.get(url)
+        }
+
+        const promise = new Promise((resolve, reject) => {
+          const link = document.createElement('link')
+
+          link.rel = 'stylesheet'
+          link.href = url
+
+          if (id) {
+            link.id = id
+          }
+
+          link.onload = resolve
+          link.onerror = reject
+
+          document.head.appendChild(link)
+        })
+
+        cssCache.set(url, promise)
+
+        return promise
+      },
+      addGlobalFn: (key, fn, name = false, parent = window) => {
+        if (!false && key.startsWith('pjax')) return
+        const globalFn = parent.globalFn || {}
+        globalFn[key] = globalFn[key] || {}
+        globalFn[key][name || Object.keys(globalFn[key]).length] = fn
+        parent.globalFn = globalFn
+      }
+    }
+  
+      
+      const metaThemeColor = document.querySelector('meta[name="theme-color"]')
+      const activateDarkMode = () => {
+        document.documentElement.dataset.theme = 'dark'
+        if (metaThemeColor !== null) {
+          metaThemeColor.setAttribute('content', '#0d0d0d')
+        }
+      }
+      const activateLightMode = () => {
+        document.documentElement.dataset.theme = 'light'
+        if (metaThemeColor !== null) {
+          metaThemeColor.setAttribute('content', '#ffffff')
+        }
+      }
+
+      btf.activateDarkMode = activateDarkMode
+      btf.activateLightMode = activateLightMode
+
+      const theme = saveToLocal.get('theme')
+    
+          theme === 'dark' ? activateDarkMode() : theme === 'light' ? activateLightMode() : null
+        
+      
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        document.documentElement.classList.toggle('hide-aside', asideStatus === 'hide')
+      }
+    
+      
+    const detectApple = () => {
+      if (/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)) {
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+  
+    })()
+  </script><script>const GLOBAL_CONFIG = {
+  root: '/',
+  algolia: undefined,
+  localSearch: undefined,
+  translate: undefined,
+  highlight: {"plugin":"highlight.js","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false,"highlightFullpage":false,"highlightMacStyle":false},
+  copy: {
+    success: '复制成功',
+    error: '复制失败',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '',
+  dateSuffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: undefined,
+  lightbox: 'null',
+  Snackbar: undefined,
+  infinitegrid: {
+    js: 'https://cdn.jsdelivr.net/npm/@egjs/infinitegrid@4.13.0/dist/infinitegrid.min.js',
+    buttonText: '加载更多'
+  },
+  isPhotoFigcaption: false,
+  islazyloadPlugin: false,
+  isAnchor: false,
+  percent: {
+    toc: true,
+    rightside: false,
+  },
+  autoDarkmode: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: '8月3日',
+  isHighlightShrink: false,
+  isToc: true,
+  pageType: 'post'
+}</script><meta name="generator" content="Hexo 8.1.2"></head><body><div class="post" id="body-wrap"><header class="post-bg" id="page-header"><nav id="nav"><span id="blog-info"><a class="nav-site-title" href="/"><span class="site-name">Pax Vobiscum</span></a><a class="nav-page-title" href="/"><span class="site-name">8月3日</span><span class="site-name"><i class="fa-solid fa-circle-arrow-left"></i><span>  返回首页</span></span></a></span><div id="menus"></div></nav><div id="post-info"><h1 class="post-title">8月3日</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" datetime="2026-08-03T02:20:01.000Z" title="发表于 2026-08-03 10:20:01">2026-08-03</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2026-08-04T01:24:26.242Z" title="更新于 2026-08-04 09:24:26">2026-08-04</time></span><span class="post-meta-categories"><span class="post-meta-separator">|</span><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/C%E5%A4%8D%E4%B9%A0/">C复习</a></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title=""><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">浏览量:</span><span id="busuanzi_value_page_pv"><i class="fa-solid fa-spinner fa-spin"></i></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="container post-content" id="article-container"><h1>atan()和atan2()</h1>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">atan</span>(<span class="number">1.0</span>) == pi/<span class="number">4</span>;</span><br><span class="line"><span class="built_in">atan</span>(<span class="number">-1.0</span>) == -pi/<span class="number">4</span>;</span><br><span class="line"><span class="built_in">atan2</span>(<span class="number">-1.0</span>, <span class="number">-1.0</span>) == <span class="number">-3</span>/<span class="number">4</span>*pi;</span><br></pre></td></tr></table></figure>
+<h1>assert()</h1>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">double</span> <span class="title function_">divine</span><span class="params">(<span class="type">double</span> x, <span class="type">double</span> y)</span></span><br><span class="line">&#123;</span><br><span class="line">    assert(y != <span class="number">0</span>);</span><br><span class="line">    <span class="keyword">return</span> (x/y);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>满足assert()中的条件则不会报错，若不满足则会在此行提示。这一方面是将程序员脑中的边界条件显式地写出来，方便调试；另一方面是，若程序在前面出错（不一定是报错），则它会带着错误结果继续运行，最后报错行不一定是出错的根源，不好调试。通过assert()可快速确定错误地点。另外，使用</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">#NDEBUG</span><br><span class="line"></span><br><span class="line"><span class="title function_">assert</span><span class="params">(...)</span> <span class="comment">// 定义这个宏后, 所有的assert()都会失效</span></span><br></pre></td></tr></table></figure>
+<h1>qsort()</h1>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">void</span> <span class="title function_">qsort</span><span class="params">(<span class="type">void</span> *base, <span class="type">size_t</span> nmemb, <span class="type">size_t</span> size, <span class="type">int</span> (*compar)(<span class="type">const</span> <span class="type">void</span> *, <span class="type">const</span> <span class="type">void</span> *))</span>;</span><br></pre></td></tr></table></figure>
+<p>函数原型如上。base指向排序数组首元素, nmemb是数组元素个数, size是每个元素的字符数（因为qsort会将数组指针强制转换成void*类型, 所以它不知道数组元素的大小, 需要用户提供），compar即用户需要传入的比较函数指针。</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">int</span> arr_asc[] = &#123; <span class="number">3</span>, <span class="number">2</span>, <span class="number">4</span>, <span class="number">1</span>&#125;;</span><br><span class="line"></span><br><span class="line">qsort(arr_asc, <span class="number">4</span>, <span class="keyword">sizeof</span>(<span class="type">int</span>), comp_asc);</span><br><span class="line"></span><br><span class="line"><span class="type">int</span> <span class="title function_">comp_asc</span><span class="params">(<span class="type">const</span> <span class="type">void</span> *a, <span class="type">const</span> <span class="type">void</span> *b)</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="type">int</span> *pa = (<span class="type">int</span> *)a;             <span class="comment">// 使用指针访问</span></span><br><span class="line">    <span class="type">int</span> *pb = (<span class="type">int</span> *)b;</span><br><span class="line">    <span class="keyword">if</span>(*pa &lt; *pb)<span class="keyword">return</span> <span class="number">-1</span>;</span><br><span class="line">    <span class="keyword">else</span> <span class="keyword">if</span>(*pa &gt; *pb)<span class="keyword">return</span> <span class="number">1</span>;</span><br><span class="line">    <span class="keyword">else</span> <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="type">int</span> <span class="title function_">comp_desc</span><span class="params">(<span class="type">const</span> <span class="type">void</span> *a, <span class="type">const</span> <span class="type">void</span> *b)</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="type">int</span> *pa = (<span class="type">int</span> *)a;             <span class="comment">// 使用指针访问, 也可以使用int pa = *(int*)a;</span></span><br><span class="line">    <span class="type">int</span> *pb = (<span class="type">int</span> *)b;</span><br><span class="line">    <span class="keyword">return</span> *pb - *pa;               <span class="comment">// 直接返回差值, 如果a&lt;b则返回正数</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>这里和之前的函数指针也对应上了。注意qsort()函数指针要求是，如果a排在b前面，则函数应该返回负数，反之返回正数，0表示相等。</p>
+<h2 id="比较函数规则">比较函数规则</h2>
+<p>qsort()非常灵活，因为比较的规则由程序员编写，所以它不仅可以按数值大小升序或降序排列，还可以按结构体成员大小或字典顺序排列。</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">const</span> <span class="type">char</span>* arr_asc[] = &#123;<span class="string">&quot;banana&quot;</span>, <span class="string">&quot;apple&quot;</span>, <span class="string">&quot;pear&quot;</span>, <span class="string">&quot;grape&quot;</span>&#125;;</span><br><span class="line">qsort(arr_asc, <span class="keyword">sizeof</span>(arr_asc)/<span class="keyword">sizeof</span>(<span class="type">char</span>*), <span class="keyword">sizeof</span>(<span class="type">char</span>*), comp_string_asc);</span><br><span class="line"></span><br><span class="line"><span class="type">int</span> <span class="title function_">comp_string_asc</span><span class="params">(<span class="type">const</span> <span class="type">void</span> *a, <span class="type">const</span> <span class="type">void</span> *b)</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="type">const</span> <span class="type">char</span> **pa = (<span class="type">const</span> <span class="type">char</span> **)a; <span class="comment">// 使用指针访问</span></span><br><span class="line">    <span class="type">const</span> <span class="type">char</span> **pb = (<span class="type">const</span> <span class="type">char</span> **)b;</span><br><span class="line">    <span class="keyword">return</span> <span class="built_in">strcmp</span>(*pa, *pb);            <span class="comment">// strcmp也是ascii小的在前, 即升序</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="type">int</span> <span class="title function_">comp_string_desc</span><span class="params">(<span class="type">const</span> <span class="type">void</span> *a, <span class="type">const</span> <span class="type">void</span> *b)</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="type">const</span> <span class="type">char</span> *pa = (<span class="type">const</span> <span class="type">char</span> *)a; <span class="comment">// 直接使用字符数组指针了</span></span><br><span class="line">    <span class="type">const</span> <span class="type">char</span> *pb = (<span class="type">const</span> <span class="type">char</span> *)b;</span><br><span class="line">    <span class="keyword">return</span> <span class="built_in">strcmp</span>(pb, pa);            <span class="comment">// 直接交换参数顺序即可实现降序</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="函数元素的比较">函数元素的比较</h2>
+<p>注意到上面使用了两种方式，一种是用元素的指针访问，一种是直接访问元素本身。</p>
+<p>比如最开始比较数组数字大小时传入的就是arr_asc(type == int *)，其元素为int，所以可以使用int *也可以使用*(int *)。之后的字符指针数组，因为比较的元素是字符串，所以可以使用char **也可以使用char *。（因为指针数组首地址，也就是指向指针的指针，又或者字符串本身（字符指针）都是指针，所以不需要用*解引用。</p>
+</article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta"><i class="fas fa-circle-user fa-fw"></i>文章作者: </span><span class="post-copyright-info"><a href="https://cetrainquisenva.github.io">秋水</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta"><i class="fas fa-square-arrow-up-right fa-fw"></i>文章链接: </span><span class="post-copyright-info"><a href="https://cetrainquisenva.github.io/2026/08/03/8%E6%9C%883%E6%97%A5/">https://cetrainquisenva.github.io/2026/08/03/8%E6%9C%883%E6%97%A5/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta"><i class="fas fa-circle-exclamation fa-fw"></i>版权声明: </span><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明来源 <a href="https://cetrainquisenva.github.io" target="_blank">Pax Vobiscum</a>！</span></div></div><div class="tag_share"><div class="post-share"><div class="social-share" data-image="/img/paul-zoetemeijer-fqa7yvnx280-unsplash.png" data-sites="facebook,x,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1.1.6/sharejs/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1.1.6/sharejs/dist/js/social-share.min.js" defer></script></div></div><nav class="pagination-post" id="pagination"><a class="pagination-related" href="/2026/08/03/%E9%9B%B7%E8%BE%BE%E6%95%B0%E6%8D%AE%E5%9C%A8MATLAB%E4%B8%AD%E7%9A%84%E5%AD%98%E5%82%A8/" title="雷达数据在MATLAB中的存储"><div class="cover" style="background: var(--default-bg-color)"></div><div class="info"><div class="info-1"><div class="info-item-1">上一篇</div><div class="info-item-2">雷达数据在MATLAB中的存储</div></div><div class="info-2"><div class="info-item-1">原始二进制数据 通常按照帧-脉冲-接收天线-采样点的方式存储，每个采样点由16位整数的实部（I）和虚部（Q）组成。 具体存储形式根据雷达不同有所区别，比如交织（rx1-rx2-rx3-rx4）或者非交织（先存完一个天线的所有数据，再下一个）的模式。 MATLAB中的处理方式 通常形成一个四维复数矩阵，其顺序为[帧数，脉冲数，接收天线数，采样点数]。在MATLAB中通过一定的算法将原始数据重组为这样的矩阵，其过程通常是 12345fid = fopen(&#x27;file_bin&#x27;, &#x27;r&#x27;);	% 打开原始数据文件% raw_data = fread(fi...</div></div></div></a><a class="pagination-related" href="/2026/08/01/8%E6%9C%881%E6%97%A5/" title="8月1日"><div class="cover" style="background: var(--default-bg-color)"></div><div class="info text-right"><div class="info-1"><div class="info-item-1">下一篇</div><div class="info-item-2">8月1日</div></div><div class="info-2"><div class="info-item-1">8月1日 枚举和宏定义 枚举 宏定义，特别是#define func_name do{;}while(0) 函数指针 通常用于传参 1234void operation(int a, int b, (*operation_func)(int, int))&#123;    operation(a, b);&#125; 可对不同类型或不同需求应用不同函数，因为只需设一个函数指针，将其指向不同的函数即可 又或者使用typedef简化函数指针的声明 1typedef void (*operation_func)(int a, int (*paramFunc)(int x, int y)); 该...</div></div></div></a></nav></div><div class="aside-content" id="aside-content"><div class="card-widget card-info text-center"><div class="avatar-img"><img src="/img/paul-zoetemeijer-fqa7yvnx280-unsplash.png" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info-name">秋水</div><div class="author-info-description">你们必晓得真理，真理必叫你们得以自由。</div><div class="site-data"><a href="/archives/"><div class="headline">文章</div><div class="length-num">7</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">0</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">2</div></a></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/xxxxxx"><i class="fab fa-github"></i><span>Follow Me</span></a></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>公告</span></div><div class="announcement_content">This is my Blog</div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="fas fa-stream"></i><span>目录</span><span class="toc-percentage"></span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link"><span class="toc-number">1.</span> <span class="toc-text">atan()和atan2()</span></a></li><li class="toc-item toc-level-1"><a class="toc-link"><span class="toc-number">2.</span> <span class="toc-text">assert()</span></a></li><li class="toc-item toc-level-1"><a class="toc-link"><span class="toc-number">3.</span> <span class="toc-text">qsort()</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%AF%94%E8%BE%83%E5%87%BD%E6%95%B0%E8%A7%84%E5%88%99"><span class="toc-number">3.1.</span> <span class="toc-text">比较函数规则</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%87%BD%E6%95%B0%E5%85%83%E7%B4%A0%E7%9A%84%E6%AF%94%E8%BE%83"><span class="toc-number">3.2.</span> <span class="toc-text">函数元素的比较</span></a></li></ol></li></ol></div></div><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2026/08/03/%E6%B5%8B%E8%B7%9D%E3%80%81%E6%B5%8B%E8%A7%92%E3%80%81%E6%B5%8B%E9%80%9F%E2%80%9C%E4%B8%89%E6%B5%8B%E2%80%9D%E6%9C%80%E7%AE%80MATLAB%E5%AE%9E%E7%8E%B0/" title="测距、测角、测速“三测”最简MATLAB实现">测距、测角、测速“三测”最简MATLAB实现</a><time datetime="2026-08-03T07:49:42.000Z" title="发表于 2026-08-03 15:49:42">2026-08-03</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2026/08/03/%E9%9B%B7%E8%BE%BE%E6%95%B0%E6%8D%AE%E5%9C%A8MATLAB%E4%B8%AD%E7%9A%84%E5%AD%98%E5%82%A8/" title="雷达数据在MATLAB中的存储">雷达数据在MATLAB中的存储</a><time datetime="2026-08-03T07:22:39.000Z" title="发表于 2026-08-03 15:22:39">2026-08-03</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2026/08/03/8%E6%9C%883%E6%97%A5/" title="8月3日">8月3日</a><time datetime="2026-08-03T02:20:01.000Z" title="发表于 2026-08-03 10:20:01">2026-08-03</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2026/08/01/MUSIC%E7%AE%97%E6%B3%95/" title="MUSIC算法">MUSIC算法</a><time datetime="2026-08-01T03:41:04.000Z" title="发表于 2026-08-01 11:41:04">2026-08-01</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2026/08/01/8%E6%9C%881%E6%97%A5/" title="8月1日">8月1日</a><time datetime="2026-08-01T03:41:04.000Z" title="发表于 2026-08-01 11:41:04">2026-08-01</time></div></div></div></div></div></div></main><footer id="footer"><div class="footer-other"><div class="footer-copyright"><span class="copyright">&copy;&nbsp;2025 - 2026 By 秋水</span><span class="framework-info"><span>框架 </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo 8.1.2</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly 5.6.1</a></span></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="fas fa-book-open"></i></button><button id="darkmode" type="button" title="日间和夜间模式切换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside-config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button class="close" id="mobile-toc-button" type="button" title="目录"><i class="fas fa-list-ul"></i></button><button id="go-up" type="button" title="回到顶部"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js?v=5.6.1"></script><script src="/js/main.js?v=5.6.1"></script><div class="js-pjax"><script>(async () => {
+  const showKatex = () => {
+    document.querySelectorAll('#article-container .katex').forEach(el => el.classList.add('katex-show'))
+  }
+
+  if (!window.katex_js_css) {
+    window.katex_js_css = true
+    await btf.getCSS('https://cdn.jsdelivr.net/npm/katex@0.17.0/dist/katex.min.css')
+    if (false) {
+      await btf.getScript('https://cdn.jsdelivr.net/npm/katex@0.17.0/dist/contrib/copy-tex.min.js')
+    }
+  }
+
+  showKatex()
+})()</script></div><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div></body></html>
